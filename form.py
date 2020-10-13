@@ -19,7 +19,7 @@ def show():
 def result():
     # ファイルを開ける
     path = 'posinega.trim'
-    with open(path) as f:
+    with open(path,encoding="utf-8_sig") as f:
         lines = f.readlines()
 
     # 言葉と数値（ポジティブな言葉は+1、ネガティブな言葉は-1）を格納する
