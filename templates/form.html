@@ -1,0 +1,9 @@
+{% extends "layout.html" %} {% block content %}
+<h1>検索したいワードを入力してね</h1>
+
+<form action="/result" method="post">
+	<label for="name">名前</label>
+	<input type="text" name="name" />
+	<button type="submit">送信する</button>
+</form>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "layout.html" %} {% block content %}
+<h1>検索結果</h1>
+<p>{{ message }}</p>
+<form action="/result" method="post">
+	<p>{{ name }}の検索結果</p>
+	<p>ポジティブワード数 : {{ptotal}}</p>
+	<p>ネガティブワード数 : {{ntotal}}</p>
+</form>
+
+{% endblock %}
