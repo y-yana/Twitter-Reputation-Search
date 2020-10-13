@@ -1,15 +1,17 @@
 # ディレクトリ構造
 
-.<br>
-├── README.md<br>
-├── __pycache__<br>
-│   └── form.cpython-37.pyc<br>
+```
+├── README.md
+├── __pycache__
+│   └── form.cpython-37.pyc
 ├── form.py<br>
-├── posinega.trim<br>
-└── templates<br>
-    ├── form.html<br>
-    ├── layout.html<br>
-    └── result.html<br>
+├── posinega.trim
+└── templates
+    ├── form.html
+    ├── layout.html
+    └── result.html
+
+```
 
 # 必要なライブラリ・ファイル
 
