@@ -2,3 +2,12 @@
 Thumbs.db
 /posinega.trim
 .env
+
+# Sass
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+
+# SCSS
+reset.min.css
