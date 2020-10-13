@@ -15,6 +15,11 @@
 
 # 必要なライブラリ・ファイル
 
+## Flask
+```
+pip install Flask
+```
+
 ## 形態素解析器 [Janome](https://mocobeta.github.io/janome/)
 
 ```
@@ -49,7 +54,7 @@ ACCESS_TOKEN_SECRET = "Access token secret"
 ```
 を入力してください。
 
-# サーバー起動方法
+# 実行
 ```
-FLASK_APP=form.py FLASK_ENV=developme flask run
+python form.py
 ```

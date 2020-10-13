@@ -73,3 +73,8 @@ def result():
                     ntotal += 1
     name = request.form["name"]
     return render_template("result.html", name=name, ptotal=ptotal, ntotal=ntotal)
+
+
+# おまじない
+if __name__ == "__main__":
+    app.run(debug=True)
