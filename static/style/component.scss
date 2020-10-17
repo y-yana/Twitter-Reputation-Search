@@ -59,6 +59,15 @@ form {
   }
 }
 
+#searchResult{
+  width: fit-content;
+  color: #ffffff;
+  font-size: 1.5rem;
+  span{
+    font-weight: bold;
+  }
+}
+
 /* Resultの横線ここから */
 .title-border {
   width: 80%;
