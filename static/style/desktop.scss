@@ -1,3 +1,26 @@
 /* PC版デザインここから */
 @media screen and (min-width: 1300px) {
+
+/* form.html レイアウトここから */
+#main{
+  width: 700px;
+}
+
+#topTitle{
+  margin: 5rem auto 0 0;
+  font-size: 4.5rem;
+  line-height: 5rem;
+  letter-spacing: 0.25rem;
+}
+
+form{
+  margin: 2rem 0 0 auto;
+}
+
+img{
+  width: 450px;
+  margin: 5rem auto 2rem;
+}
+/* form.html レイアウトここまで */
+
 }
