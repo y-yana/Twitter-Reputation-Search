@@ -3,6 +3,7 @@ Thumbs.db
 /posinega.trim
 .env
 /posinega2.txt
+*.pyc
 
 # Sass
 .sass-cache/
