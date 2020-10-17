@@ -147,12 +147,29 @@ form {
   bottom: -24px;
   left: 5%;
   border: 12px solid transparent;
-  border-top: 12px solid #FFF;
   z-index: 2;
 }
 
 #right:before{
   left: 85%;
+}
+
+.posiWord{
+  #left,#right{
+    border: solid 3px #ff5ac8;
+  }
+  #left:before,#right:before{
+    border-top: 12px solid  #ff5ac8;
+  }
+}
+
+.negaWord{
+  #left,#right{
+    border: solid 3px  #2269e1;
+  }
+  #left:before,#right:before{
+    border-top: 12px solid  #2269e1;
+  }
 }
 /* 吹き出しここまで */
 
