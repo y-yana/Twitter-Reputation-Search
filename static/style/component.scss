@@ -1,4 +1,4 @@
-/* 全体の共通部分ここから */
+/* ＜全体の共通部分ここから＞ */
 html {
   background-color: #57bafd;
 }
@@ -13,9 +13,9 @@ html {
   height: 4rem;
   background-color: #414141;
 }
-/* 全体の共通部分ここまで */
+/* ＜全体の共通部分ここまで＞ */
 
-/* form.html共通部分ここから */
+/* ＜form.html共通部分ここから＞ */
 #topTitle {
   width: fit-content;
   display: flex;
@@ -29,7 +29,7 @@ html {
   text-shadow: 2px 2px 3px #969696;
 }
 
-/* 検索窓 */
+/* 検索窓ここから */
 form {
   width: fit-content;
   background-color: #ffffff;
@@ -41,9 +41,10 @@ form {
     cursor: pointer;
   }
 }
-/* form.html共通部分ここまで */
+/* 検索窓ここまで */
+/* ＜form.html共通部分ここまで＞ */
 
-/* result.html共通部分ここから */
+/* ＜result.html共通部分ここから＞ */
 #resultTitle {
   width: fit-content;
   color: #ffffff;
@@ -57,7 +58,7 @@ form {
   }
 }
 
-/* Resultの横線 */
+/* Resultの横線ここから */
 .title-border {
   width: 80%;
   display: flex;
@@ -84,4 +85,21 @@ form {
 .title-border:after {
   margin-left: 1rem;
 }
-/* result.html共通部分ここまで */
+/* Resultの横線ここまで */
+
+#btns{
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  #btn{
+    width: fit-content;
+    background-color: #ffffff;
+    padding: 0.7rem 2.5rem;
+    border-radius: 25px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #424242;
+    margin-left: 2rem;
+  }
+}
+/* ＜result.html共通部分ここまで＞ */

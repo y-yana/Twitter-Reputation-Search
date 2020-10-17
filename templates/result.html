@@ -9,29 +9,27 @@
 	<h1>Result</h1>
 </div>
 
-<p>{{ message }}</p>
-
 <p>{{ name }}の検索結果</p>
+<div id="canvasArea">
+	<canvas id="pojinegaChart"></canvas>
+</div>
 <h3>{{message}}</h3>
-<p>ポジティブと判定された単語 : {{p_sentence}}</p>
-<p>ネガティブと判定された単語 : {{n_sentence}}</p>
 <p>ポジティブツイートの割合 : {{p_per}}%</p>
 <p>ネガティブツイートの割合 : {{n_per}}%</p>
 <p>中間ツイートの割合 : {{m_per}}%</p>
 
-<div id="canvasArea">
-	<canvas id="pojinegaChart"></canvas>
+<p>ポジティブと判定された単語 : {{p_sentence}}</p>
+<p>ネガティブと判定された単語 : {{n_sentence}}</p>
+
+<div id="btns">
+  <a
+  	href="https://twitter.com/share?ref_src=twsrc%5Etfw"
+  	class="twitter-share-button"
+  	data-show-count="false"
+  	data-text="『{{name}}』の検索結果はポジティブツイートが{{p_per}}%、ネガティブツイートが{{n_per}}%でした！"
+	>Tweet</a>
+  <a id="btn" href="./">Replay</a>
 </div>
-
-<a
-	href="https://twitter.com/share?ref_src=twsrc%5Etfw"
-	class="twitter-share-button"
-	data-show-count="false"
-	data-text="『{{name}}』の検索結果はポジティブツイートが{{p_per}}%、ネガティブツイートが{{n_per}}%でした！"
-	>Tweet</a
->
-
-<button><a href="./">Replay</a></button>
 
 </div>
 
