@@ -19,7 +19,7 @@ def show():
 def result():
     # ファイルを開ける
     path = 'posinega.trim'
-    with open(path,encoding="utf-8_sig") as f:
+    with open(path, encoding="utf-8_sig") as f:
         lines = f.readlines()
 
     # 言葉と数値（ポジティブな言葉は+1、ネガティブな言葉は-1）を格納する
@@ -60,19 +60,33 @@ def result():
 
     ptotal = 0
     ntotal = 0
+    most_positive_sentence = ""
+    most_negative_sentence = ""
+    most_positive = 0
+    most_negative = 0
 
     tokenizer = Tokenizer()
 
     for sentence in sentenses:
-
+        p = 0
+        n = 0
         for token in tokenizer.tokenize(sentence, wakati=True):
             if data.get(token) != None:
                 if data.get(token) == 1:
-                    ptotal += 1
+                    p += 1
                 else:
-                    ntotal += 1
+                    n += 1
+            if p > most_positive:
+                most_positive = p
+                most_positive_sentence = sentence
+            if n > most_negative:
+                most_negative = n
+                most_negative_sentence = sentence
+        ptotal += p
+        ntotal += n
+
     name = request.form["name"]
-    return render_template("result.html", name=name, ptotal=ptotal, ntotal=ntotal)
+    return render_template("result.html", name=name, ptotal=ptotal, ntotal=ntotal, most_positive_sentence=most_positive_sentence, most_negative_sentence=most_negative_sentence)
 
 
 # おまじない
