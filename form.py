@@ -48,22 +48,20 @@ def result():
     query = urlencode({
         'q': request.form["name"],  # 検索ワード
         'result_type': 'recent',  # 最近のツイートを取得する
+        'lang': 'ja',
         'count': 100  # 取得するツイート数（最大100個まで）
     })
 
     # ツイートを取得してsentencesに追加
     sentenses = []
-
     result = api.GetSearch(raw_query=query)
     for status in result:
         sentenses.append(status.text)
 
     ptotal = 0
     ntotal = 0
-    most_positive_sentence = ""
-    most_negative_sentence = ""
-    most_positive = 0
-    most_negative = 0
+    positive_words = []
+    negative_words = []
 
     tokenizer = Tokenizer()
 
@@ -76,22 +74,21 @@ def result():
             t = token.base_form  # 基本形に直す
             if data.get(t) != None:  # 辞書にあったら
                 if data.get(t) == 1:  # ポジティブと判定されたら
+                    positive_words.append(t)
                     # print("ポジティブ"+t)
                     p += 1
                 else:
+                    negative_words.append(t)
                     # print("ネガティブ"+t)
                     n += 1
-            if p > most_positive:
-                most_positive = p
-                most_positive_sentence = sentence
-            if n > most_negative:
-                most_negative = n
-                most_negative_sentence = sentence
+
         ptotal += p
         ntotal += n
+    positive_sentence = ', '.join(positive_words)
+    negative_sentence = ', '.join(negative_words)
 
     name = request.form["name"]
-    return render_template("result.html", name=name, ptotal=ptotal, ntotal=ntotal, most_positive_sentence=most_positive_sentence, most_negative_sentence=most_negative_sentence)
+    return render_template("result.html", name=name, ptotal=ptotal, ntotal=ntotal, positive_sentence=positive_sentence, negative_sentence=negative_sentence)
 
 
 # おまじない
