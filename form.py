@@ -70,11 +70,16 @@ def result():
     for sentence in sentenses:
         p = 0
         n = 0
-        for token in tokenizer.tokenize(sentence, wakati=True):
-            if data.get(token) != None:
-                if data.get(token) == 1:
+        # print("---------sentence----------")
+        # print(sentence)
+        for token in tokenizer.tokenize(sentence):
+            t = token.base_form  # 基本形に直す
+            if data.get(t) != None:  # 辞書にあったら
+                if data.get(t) == 1:  # ポジティブと判定されたら
+                    # print("ポジティブ"+t)
                     p += 1
                 else:
+                    # print("ネガティブ"+t)
                     n += 1
             if p > most_positive:
                 most_positive = p
