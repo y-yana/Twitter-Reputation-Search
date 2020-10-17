@@ -1,3 +1,6 @@
+/* 変数宣言 */
+$text-shadow:#969696;
+
 /* ＜全体の共通部分ここから＞ */
 html {
   background-color: #57bafd;
@@ -26,7 +29,7 @@ html {
   line-height: 3.5rem;
   letter-spacing: 0.2rem;
   font-size: 3.1rem;
-  text-shadow: 2px 2px 3px #969696;
+  text-shadow: 2px 2px 3px $text-shadow;
 }
 
 /* 検索窓ここから */
@@ -35,7 +38,6 @@ form {
   background-color: #ffffff;
   border-radius: 25px;
   padding: 0.5rem 1.3rem;
-
   button {
     height: 24px;
     cursor: pointer;
@@ -50,9 +52,8 @@ form {
   color: #ffffff;
   font-family: fantasy;
   font-size: 1.5rem;
-  text-shadow: 2px 2px 3px #969696;
+  text-shadow: 2px 2px 3px $text-shadow;
   letter-spacing: 0.1rem;
-
   span {
     margin: 0 0.25rem;
   }
@@ -68,14 +69,14 @@ form {
     color: #ffffff;
     font-family: fantasy;
     font-size: 3rem;
-    text-shadow: 2px 2px 3px #969696;
+    text-shadow: 2px 2px 3px $text-shadow;
     letter-spacing: 0.1rem;
   }
 }
 .title-border:before,
 .title-border:after {
   border-top: 3px solid #ffffff;
-  box-shadow: 2px 2px 5px #969696;
+  box-shadow: 2px 2px 5px $text-shadow;
   content: "";
   flex-grow: 1;
 }
@@ -86,6 +87,15 @@ form {
   margin-left: 1rem;
 }
 /* Resultの横線ここまで */
+
+#message{
+  width: fit-content;
+  color: #ffff02;
+  font-family: fantasy;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 3px $text-shadow;
+  letter-spacing: 0.1rem;
+}
 
 #btns{
   width: fit-content;
