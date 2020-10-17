@@ -13,8 +13,12 @@ app = Flask(__name__)
 
 @app.route("/")
 def show():
-    message = "Hello World"
-    return render_template("form.html", message=message)
+    return render_template("form.html")
+
+
+@app.route("/2")
+def show2():
+    return render_template("form2.html")
 
 
 @app.route("/result", methods=["POST"])
@@ -27,7 +31,6 @@ def result():
 def result2():
     name1, name2, name3, name4, name5, per1, per2, per3, per4, per5 = ts2.search()
     return render_template("result.html", name1=name1, name2=name2, name3=name3, name4=name4, name5=name5, per1=per1, per2=per2, per3=per3, per4=per4, per5=per5)
-
 
     # おまじない
 if __name__ == "__main__":
