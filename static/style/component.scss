@@ -1,5 +1,7 @@
-/* 共通部分デザイン */
+/* 変数宣言 */
+$text-shadow:#969696;
 
+/* ＜全体の共通部分ここから＞ */
 html {
 	background-color: #57bafd;
 }
@@ -9,34 +11,181 @@ html {
 	margin: 0 auto;
 }
 
-#topTitle {
-	width: fit-content;
-	display: flex;
-	flex-direction: column;
-	color: #ffffff;
-	font-weight: bold;
-	font-family: fantasy;
-	line-height: 3.5rem;
-	letter-spacing: 0.2rem;
-	font-size: 3.1rem;
-	text-shadow: 2px 2px 3px #969696;
-}
-
-/* 検索窓 */
-form {
-	width: fit-content;
-	background-color: #ffffff;
-	border-radius: 25px;
-	padding: 0.5rem 1.3rem;
-
-	button {
-		height: 24px;
-		cursor: pointer;
-	}
-}
-
 #footer {
-	width: 100%;
-	height: 4rem;
-	background-color: #414141;
+  width: 100%;
+  height: 4rem;
+  background-color: #414141;
 }
+/* ＜全体の共通部分ここまで＞ */
+
+/* ＜form.html共通部分ここから＞ */
+#topTitle {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  font-weight: bold;
+  font-family: fantasy;
+  line-height: 3.5rem;
+  letter-spacing: 0.2rem;
+  font-size: 3.1rem;
+  text-shadow: 2px 2px 3px $text-shadow;
+}
+
+/* 検索窓ここから */
+form {
+  width: fit-content;
+  background-color: #ffffff;
+  border-radius: 25px;
+  padding: 0.5rem 1.3rem;
+  button {
+    height: 24px;
+    cursor: pointer;
+  }
+}
+/* 検索窓ここまで */
+/* ＜form.html共通部分ここまで＞ */
+
+/* ＜result.html共通部分ここから＞ */
+#resultTitle {
+  width: fit-content;
+  color: #ffffff;
+  font-family: fantasy;
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 3px $text-shadow;
+  letter-spacing: 0.1rem;
+  span {
+    margin: 0 0.25rem;
+  }
+}
+
+#searchResult{
+  width: fit-content;
+  color: #ffffff;
+  font-size: 1.5rem;
+  span{
+    font-weight: bold;
+  }
+}
+
+/* Resultの横線ここから */
+.title-border {
+  width: 80%;
+  display: flex;
+  align-items: center;
+
+  h1{
+    color: #ffffff;
+    font-family: fantasy;
+    font-size: 3rem;
+    text-shadow: 2px 2px 3px $text-shadow;
+    letter-spacing: 0.1rem;
+  }
+}
+.title-border:before,
+.title-border:after {
+  border-top: 3px solid #ffffff;
+  box-shadow: 2px 2px 5px $text-shadow;
+  content: "";
+  flex-grow: 1;
+}
+.title-border:before {
+  margin-right: 1rem;
+}
+.title-border:after {
+  margin-left: 1rem;
+}
+/* Resultの横線ここまで */
+
+#message{
+  width: fit-content;
+  color: #ffff02;
+  font-family: fantasy;
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 3px $text-shadow;
+  letter-spacing: 0.1rem;
+}
+
+#word{
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  #resultTitle{
+    text-shadow: none;
+    font-size: 2rem;
+    #posi{
+      color: #ff5ac8;
+    }
+    #nega{
+      color: #2269e1;
+    }
+  }
+}
+
+/* 吹き出しここから */
+#left,#right {
+  position: relative;
+  width: fit-content;
+  display: inline-block;
+  margin: 0 0 1.5rem;
+  padding: 0.8rem 1.5rem;
+  color: #555;
+  font-size: 16px;
+  background: #FFF;
+  box-sizing: border-box;
+  border-radius: 3px;
+  p{
+    width: 230px;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+#left:before,#right:before {
+  content: "";
+  position: absolute;
+  bottom: -24px;
+  left: 5%;
+  border: 12px solid transparent;
+  z-index: 2;
+}
+
+#right:before{
+  left: 85%;
+}
+
+.posiWord{
+  #left,#right{
+    border: solid 3px #ff5ac8;
+  }
+  #left:before,#right:before{
+    border-top: 12px solid  #ff5ac8;
+  }
+}
+
+.negaWord{
+  #left,#right{
+    border: solid 3px  #2269e1;
+  }
+  #left:before,#right:before{
+    border-top: 12px solid  #2269e1;
+  }
+}
+/* 吹き出しここまで */
+
+#btns{
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  #btn{
+    width: fit-content;
+    background-color: #ffffff;
+    padding: 0.7rem 2.5rem;
+    border-radius: 25px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #424242;
+    margin-left: 2rem;
+  }
+}
+/* ＜result.html共通部分ここまで＞ */
