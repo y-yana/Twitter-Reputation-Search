@@ -1,9 +1,17 @@
 {% extends "layout.html" %} {% block content %}
-<p><span id="result_title">Twitter</span><span id="result_title">Reputation</span><span id="result_title">Search</span></p>
+
+<p>
+	<span id="result_title">Twitter</span
+	><span id="result_title">Reputation</span
+	><span id="result_title">Search</span>
+</p>
+
 <h1>Result</h1>
+
 <p>{{ message }}</p>
 
 	<p>{{ name }}の検索結果</p>
+	<h3>{{message}}</h3>
 	<p>ポジティブと判定された単語 : {{p_sentence}}</p>
 	<p>ネガティブと判定された単語 : {{n_sentence}}</p>
 	<p>ポジティブツイートの割合 : {{p_per}}%</p>

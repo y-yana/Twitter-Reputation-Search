@@ -92,7 +92,17 @@ def result():
     name = request.form["name"]
     p_per = int(ptotal/(ptotal+ntotal)*100)
     n_per = 100 - p_per
-    return render_template("result.html", name=name, p_per=p_per, n_per=n_per, p_sentence=p_sentence, n_sentence=n_sentence)
+    message = ""
+    if p_per > 80:
+        message = "Very Good"
+    elif p_per > 65:
+        message = "Good"
+    elif p_per > 40:
+        message = "Normal"
+    else:
+        message = "Bad"
+
+    return render_template("result.html", message=message, name=name, p_per=p_per, n_per=n_per, p_sentence=p_sentence, n_sentence=n_sentence)
 
 
 # おまじない
