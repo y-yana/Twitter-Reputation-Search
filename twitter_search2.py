@@ -83,4 +83,4 @@ def search():
 
             pers.append(p_per)
 
-    return name[0], name[1], name[2], name[3], name[4], pers[0], pers[1], pers[2], pers[3], pers[4]
+    return names[0], names[1], names[2], names[3], names[4], pers[0], pers[1], pers[2], pers[3], pers[4]
