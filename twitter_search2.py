@@ -51,7 +51,7 @@ def search():
             pers.append(0)
         else:
             query = urlencode({
-                'q': request.form[name],  # 検索ワード
+                'q': name,  # 検索ワード
                 'result_type': 'recent',  # 最近のツイートを取得する
                 'lang': 'ja',
                 'count': 100  # 取得するツイート数（最大100個まで）
