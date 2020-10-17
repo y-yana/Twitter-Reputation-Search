@@ -10,16 +10,17 @@
 
 <p>{{ message }}</p>
 
-	<p>{{ name }}の検索結果</p>
-	<h3>{{message}}</h3>
-	<p>ポジティブと判定された単語 : {{p_sentence}}</p>
-	<p>ネガティブと判定された単語 : {{n_sentence}}</p>
-	<p>ポジティブツイートの割合 : {{p_per}}%</p>
-	<p>ネガティブツイートの割合 : {{n_per}}%</p>
+<p>{{ name }}の検索結果</p>
+<h3>{{message}}</h3>
+<p>ポジティブと判定された単語 : {{p_sentence}}</p>
+<p>ネガティブと判定された単語 : {{n_sentence}}</p>
+<p>ポジティブツイートの割合 : {{p_per}}%</p>
+<p>ネガティブツイートの割合 : {{n_per}}%</p>
+<p>中間ツイートの割合 : {{m_per}}%</p>
 
-	<div id="canvasArea">
-		<canvas id="pojinegaChart"></canvas>
-	</div>
+<div id="canvasArea">
+	<canvas id="pojinegaChart"></canvas>
+</div>
 
 <a
 	href="https://twitter.com/share?ref_src=twsrc%5Etfw"
@@ -37,8 +38,11 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 <script>
-	var p_per = '{{p_per}}';
-	var n_per = '{{n_per}}';
+	var p_per = "{{p_per}}";
+	var n_per = "{{n_per}}";
 </script>
-<script type="text/javascript" src="{{ url_for('static', filename='/js/result.js') }}"></script>
+<script
+	type="text/javascript"
+	src="{{ url_for('static', filename='/js/result.js') }}"
+></script>
 {% endblock %}

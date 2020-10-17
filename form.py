@@ -17,7 +17,7 @@ def show():
 
 @app.route("/result", methods=["POST"])
 def result():
-    # ファイルを開ける
+    # 『日本語評価極性辞書』を使用する場合
     path = 'posinega.trim'
     with open(path, encoding="utf-8_sig") as f:
         lines = f.readlines()
@@ -31,6 +31,31 @@ def result():
             data[l[0]] = 1
         elif l[1] == 'n':
             data[l[0]] = -1
+
+    # 『単語感情極性対応表』を使用する場合
+    # path = 'posinega2.txt'
+    # with open(path, encoding="utf-8_sig") as f:
+    #     lines = f.readlines()
+
+    # # 言葉と数値（ポジティブな言葉は+1、ネガティブな言葉は-1）を格納する
+    # data = {}
+
+    # cnt = 0
+
+    # for line in lines:
+    #     l = line.split(':')  # タブで分割
+    #     if len(l) <= 3:
+    #         continue
+    #     if cnt < 100:
+    #         print(l)
+    #         print(l[2])
+    #         cnt += 1
+    #     if float(l[3]) > 0:
+    #         data[l[0]] = 1
+    #     elif float(l[3]) < 0:
+    #         data[l[0]] = -1
+    #     else:
+    #         data[l[0]] = 0
 
     CONSUMER_KEY = os.environ.get("CONSUMER_KEY")
     CONSUMER_SECRET = os.environ.get(
@@ -66,34 +91,39 @@ def result():
     tokenizer = Tokenizer()
 
     for sentence in sentenses:
-        p = 0
-        n = 0
-        # print("---------sentence----------")
-        # print(sentence)
         for token in tokenizer.tokenize(sentence):
             t = token.base_form  # 基本形に直す
             if data.get(t) != None:  # 辞書にあったら
                 if data.get(t) == 1:  # ポジティブと判定されたら
-                    # print("ポジティブ"+t)
-                    p += 1
+                    ptotal += 1
                     if len(positive_words) < 10 and not(t in positive_words):
                         positive_words.append(t)
                 else:
-                    # print("ネガティブ"+t)
-                    n += 1
+                    ntotal += 1
                     if len(negative_words) < 10 and not(t in negative_words):
                         negative_words.append(t)
 
-        ptotal += p
-        ntotal += n
     p_sentence = ', '.join(positive_words)
     n_sentence = ', '.join(negative_words)
 
+    print(str(ptotal)+" "+str(ntotal))
+
+    m_per = 100
+    n_per = 0
+    p_per = 0
+
     name = request.form["name"]
-    p_per = int(ptotal/(ptotal+ntotal)*100)
-    n_per = 100 - p_per
+    if not ptotal+ntotal == 0:
+        p_per = int(ptotal/(ptotal+ntotal)*100)
+        n_per = int(ntotal/(ptotal+ntotal)*100)
+        m_per = 0
+
+    # 割合によってメッセージを変更
+
     message = ""
-    if p_per > 80:
+    if m_per == 100:
+        message = "None"
+    elif p_per > 80:
         message = "Very Good"
     elif p_per > 65:
         message = "Good"
@@ -102,7 +132,7 @@ def result():
     else:
         message = "Bad"
 
-    return render_template("result.html", message=message, name=name, p_per=p_per, n_per=n_per, p_sentence=p_sentence, n_sentence=n_sentence)
+    return render_template("result.html", message=message, name=name, p_per=p_per, n_per=n_per, m_per=m_per, p_sentence=p_sentence, n_sentence=n_sentence)
 
 
 # おまじない
