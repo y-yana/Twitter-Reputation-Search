@@ -106,6 +106,56 @@ form {
   letter-spacing: 0.1rem;
 }
 
+#word{
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  #resultTitle{
+    text-shadow: none;
+    font-size: 2rem;
+    #posi{
+      color: #ff5ac8;
+    }
+    #nega{
+      color: #2269e1;
+    }
+  }
+}
+
+/* 吹き出しここから */
+#left,#right {
+  position: relative;
+  width: fit-content;
+  display: inline-block;
+  margin: 0 0 1.5rem;
+  padding: 0.8rem 1.5rem;
+  color: #555;
+  font-size: 16px;
+  background: #FFF;
+  box-sizing: border-box;
+  border-radius: 3px;
+  p{
+    width: 230px;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+#left:before,#right:before {
+  content: "";
+  position: absolute;
+  bottom: -24px;
+  left: 5%;
+  border: 12px solid transparent;
+  border-top: 12px solid #FFF;
+  z-index: 2;
+}
+
+#right:before{
+  left: 85%;
+}
+/* 吹き出しここまで */
+
 #btns{
   width: fit-content;
   display: flex;
