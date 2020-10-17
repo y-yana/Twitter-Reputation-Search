@@ -76,12 +76,12 @@ def result():
                 if data.get(t) == 1:  # ポジティブと判定されたら
                     # print("ポジティブ"+t)
                     p += 1
-                    if ptotal < 10:
+                    if len(positive_words) < 10 and not(t in positive_words):
                         positive_words.append(t)
                 else:
                     # print("ネガティブ"+t)
                     n += 1
-                    if ntotal < 10:
+                    if len(negative_words) < 10 and not(t in negative_words):
                         negative_words.append(t)
 
         ptotal += p
