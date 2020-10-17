@@ -1,20 +1,25 @@
 {% extends "layout.html" %} {% block content %}
 
-<h1>検索結果</h1>
 <p>
 	<span id="result_title">Twitter</span
 	><span id="result_title">Reputation</span
 	><span id="result_title">Search</span>
 </p>
+
 <h1>Result</h1>
-<form action="/result" method="post">
+
+<p>{{ message }}</p>
+
 	<p>{{ name }}の検索結果</p>
 	<h3>{{message}}</h3>
 	<p>ポジティブと判定された単語 : {{p_sentence}}</p>
 	<p>ネガティブと判定された単語 : {{n_sentence}}</p>
 	<p>ポジティブツイートの割合 : {{p_per}}%</p>
 	<p>ネガティブツイートの割合 : {{n_per}}%</p>
-</form>
+
+	<div id="canvasArea">
+		<canvas id="pojinegaChart"></canvas>
+	</div>
 
 <a
 	href="https://twitter.com/share?ref_src=twsrc%5Etfw"
@@ -23,10 +28,17 @@
 	data-text="『{{name}}』の検索結果はポジティブツイートが{{p_per}}%、ネガティブツイートが{{n_per}}%でした！"
 	>Tweet</a
 >
+
 <script
 	async
 	src="https://platform.twitter.com/widgets.js"
 	charset="utf-8"
 ></script>
-
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script>
+	var p_per = '{{p_per}}';
+	var n_per = '{{n_per}}';
+</script>
+<script type="text/javascript" src="{{ url_for('static', filename='/js/result.js') }}"></script>
 {% endblock %}
