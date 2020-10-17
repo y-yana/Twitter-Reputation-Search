@@ -19,7 +19,7 @@ def show():
 def result():
     # ファイルを開ける
     path = 'posinega.trim'
-    with open(path,encoding="utf-8_sig") as f:
+    with open(path, encoding="utf-8_sig") as f:
         lines = f.readlines()
 
     # 言葉と数値（ポジティブな言葉は+1、ネガティブな言葉は-1）を格納する
@@ -48,31 +48,47 @@ def result():
     query = urlencode({
         'q': request.form["name"],  # 検索ワード
         'result_type': 'recent',  # 最近のツイートを取得する
+        'lang': 'ja',
         'count': 100  # 取得するツイート数（最大100個まで）
     })
 
     # ツイートを取得してsentencesに追加
     sentenses = []
-
     result = api.GetSearch(raw_query=query)
     for status in result:
         sentenses.append(status.text)
 
     ptotal = 0
     ntotal = 0
+    positive_words = []
+    negative_words = []
 
     tokenizer = Tokenizer()
 
     for sentence in sentenses:
-
-        for token in tokenizer.tokenize(sentence, wakati=True):
-            if data.get(token) != None:
-                if data.get(token) == 1:
-                    ptotal += 1
+        p = 0
+        n = 0
+        # print("---------sentence----------")
+        # print(sentence)
+        for token in tokenizer.tokenize(sentence):
+            t = token.base_form  # 基本形に直す
+            if data.get(t) != None:  # 辞書にあったら
+                if data.get(t) == 1:  # ポジティブと判定されたら
+                    positive_words.append(t)
+                    # print("ポジティブ"+t)
+                    p += 1
                 else:
-                    ntotal += 1
+                    negative_words.append(t)
+                    # print("ネガティブ"+t)
+                    n += 1
+
+        ptotal += p
+        ntotal += n
+    positive_sentence = ', '.join(positive_words)
+    negative_sentence = ', '.join(negative_words)
+
     name = request.form["name"]
-    return render_template("result.html", name=name, ptotal=ptotal, ntotal=ntotal)
+    return render_template("result.html", name=name, ptotal=ptotal, ntotal=ntotal, positive_sentence=positive_sentence, negative_sentence=negative_sentence)
 
 
 # おまじない
