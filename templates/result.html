@@ -1,8 +1,8 @@
 {% extends "layout.html" %} {% block content %}
 <h1>検索結果</h1>
-<p>{{ message }}</p>
 <form action="/result" method="post">
 	<p>{{ name }}の検索結果</p>
+	<h3>{{message}}</h3>
 	<p>ポジティブと判定された単語 : {{p_sentence}}</p>
 	<p>ネガティブと判定された単語 : {{n_sentence}}</p>
 	<p>ポジティブツイートの割合 : {{p_per}}%</p>
