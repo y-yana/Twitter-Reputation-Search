@@ -23,4 +23,48 @@ img{
 }
 /* form.html レイアウトここまで */
 
+/* result.html レイアウトここから */
+#resultTitle{
+  font-size: 2.2rem;
+  margin: 2.5rem auto 0;
+}
+
+.title-border{
+  width: 100%;
+  margin: 2rem auto 0;
+  h1{
+    font-size: 4rem;
+  }
+}
+
+#searchResult{
+  margin: 3rem auto 0;
+  font-size: 1.8rem;
+}
+
+#canvasArea{
+  margin: 0.8rem auto 0;
+}
+
+#message{
+  margin: 1.5rem auto 3rem;
+  font-size: 3.3rem;
+}
+
+#flexWord{
+  flex-direction: row-reverse;
+}
+
+#word{
+  margin: 0 auto 4rem;
+  #resultTitle{
+    margin: 0 auto 0.8rem;
+  }
+}
+
+#btns{
+  margin: 0 auto 4rem;
+}
+/* result.html レイアウトここまで */
+
 }

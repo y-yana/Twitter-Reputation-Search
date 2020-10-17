@@ -15,3 +15,40 @@ img{
   margin: 3.5rem auto 2rem;
 }
 /* form.html レイアウトここまで */
+
+/* result.html レイアウトここから */
+#resultTitle{
+  margin: 2rem auto 0;
+}
+
+.title-border{
+  margin: 1.3rem auto 0;
+}
+
+#searchResult{
+  margin: 2rem auto 0;
+}
+
+#canvasArea{
+  margin: 0.4rem auto 0;
+}
+
+#message{
+  margin: 1rem auto 3rem;
+}
+
+#flexWord{
+  flex-direction: column;
+}
+
+#word{
+  margin: 0 auto 2rem;
+  #resultTitle{
+    margin: 0 auto 0.5rem;
+  }
+}
+
+#btns{
+  margin: 0 auto 3rem;
+}
+/* result.html レイアウトここまで */

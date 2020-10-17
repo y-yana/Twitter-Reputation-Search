@@ -65,6 +65,9 @@ form {
   font-size: 1.5rem;
   span{
     font-weight: bold;
+    color: #ffff02;
+    text-shadow: 2px 2px 3px $text-shadow;
+    margin: 0 0.3rem;
   }
 }
 
@@ -106,6 +109,10 @@ form {
   letter-spacing: 0.1rem;
 }
 
+#flexWord{
+  display: flex;
+}
+
 #word{
   width: fit-content;
   display: flex;
@@ -127,7 +134,7 @@ form {
   position: relative;
   width: fit-content;
   display: inline-block;
-  margin: 0 0 1.5rem;
+  margin: 0 0 1.3rem;
   padding: 0.8rem 1.5rem;
   color: #555;
   font-size: 16px;
