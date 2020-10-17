@@ -2,19 +2,25 @@
 
 <h1><span id="title">Twitter</span><span id="title">Reputation</span><span id="title">Search</span></h1>
 
-<form action="/result2" method="post">
+<form id="multiform" action="/result2" method="post">
 
     <input type="text" name="name1" placeholder="search word" id="text-field">
     <input type="text" name="name2" placeholder="search word" id="text-field">
-	<input type="text" name="name3" placeholder="search word" id="text-field">
+	<!-- <input type="text" name="name3" placeholder="search word" id="text-field">
 	<input type="text" name="name4" placeholder="search word" id="text-field">
-	<input type="text" name="name5" placeholder="search word" id="text-field">
+	<input type="text" name="name5" placeholder="search word" id="text-field"> -->
 
+	<button type="button" class="addbtn">+</button>
 	<button type="submit" id="submit-button"> <span class="material-icons">search</span></button>
 </form>
 
 
 <img src="../static/image/main.png" alt="検索する男性の画像">
 <button onclick="location.href='/'">ワンワード検索へ</button>
+
+<script
+	type="text/javascript"
+	src="{{ url_for('static', filename='js/form2.js') }}"
+>
 
 {% endblock %}
