@@ -74,21 +74,25 @@ def result():
             t = token.base_form  # 基本形に直す
             if data.get(t) != None:  # 辞書にあったら
                 if data.get(t) == 1:  # ポジティブと判定されたら
-                    positive_words.append(t)
                     # print("ポジティブ"+t)
                     p += 1
+                    if ptotal < 10:
+                        positive_words.append(t)
                 else:
-                    negative_words.append(t)
                     # print("ネガティブ"+t)
                     n += 1
+                    if ntotal < 10:
+                        negative_words.append(t)
 
         ptotal += p
         ntotal += n
-    positive_sentence = ', '.join(positive_words)
-    negative_sentence = ', '.join(negative_words)
+    p_sentence = ', '.join(positive_words)
+    n_sentence = ', '.join(negative_words)
 
     name = request.form["name"]
-    return render_template("result.html", name=name, ptotal=ptotal, ntotal=ntotal, positive_sentence=positive_sentence, negative_sentence=negative_sentence)
+    p_per = int(ptotal/(ptotal+ntotal)*100)
+    n_per = 100 - p_per
+    return render_template("result.html", name=name, p_per=p_per, n_per=n_per, p_sentence=p_sentence, n_sentence=n_sentence)
 
 
 # おまじない
