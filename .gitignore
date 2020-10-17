@@ -11,3 +11,6 @@ Thumbs.db
 
 # SCSS
 reset.min.css
+component.min.css
+desktop.min.css
+phone.min.css
