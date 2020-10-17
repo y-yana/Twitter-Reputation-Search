@@ -1,42 +1,42 @@
 /* 共通部分デザイン */
 
 html {
-  background-color: #57bafd;
+	background-color: #57bafd;
 }
 
 #main {
-  width: fit-content;
-  margin: 0 auto;
+	width: fit-content;
+	margin: 0 auto;
 }
 
-#topTitle{
-  width: fit-content;
-  display: flex;
-  flex-direction: column;
-  color: #ffffff;
-  font-weight: bold;
-  font-family: fantasy;
-  line-height: 3.5rem;
-  letter-spacing: 0.2rem;
-  font-size: 3.1rem;
-  text-shadow: 2px 2px 3px #969696;
+#topTitle {
+	width: fit-content;
+	display: flex;
+	flex-direction: column;
+	color: #ffffff;
+	font-weight: bold;
+	font-family: fantasy;
+	line-height: 3.5rem;
+	letter-spacing: 0.2rem;
+	font-size: 3.1rem;
+	text-shadow: 2px 2px 3px #969696;
 }
 
 /* 検索窓 */
-form{
-  width: fit-content;
-  background-color: #ffffff;
-  border-radius: 25px;
-  padding: 0.5rem 1.3rem;
+form {
+	width: fit-content;
+	background-color: #ffffff;
+	border-radius: 25px;
+	padding: 0.5rem 1.3rem;
 
-  button{
-    height: 24px;
-    cursor: pointer;
-  }
+	button {
+		height: 24px;
+		cursor: pointer;
+	}
 }
 
 #footer {
-  width: 100%;
-  height: 4rem;
-  background-color: #414141;
+	width: 100%;
+	height: 4rem;
+	background-color: #414141;
 }
