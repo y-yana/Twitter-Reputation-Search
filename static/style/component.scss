@@ -65,6 +65,9 @@ form {
   font-size: 1.5rem;
   span{
     font-weight: bold;
+    color: #ffff02;
+    text-shadow: 2px 2px 3px $text-shadow;
+    margin: 0 0.3rem;
   }
 }
 
