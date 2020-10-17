@@ -1,3 +1,5 @@
+/* 共通部分デザイン */
+
 html {
   background-color: #57bafd;
 }
@@ -9,7 +11,6 @@ html {
 
 #topTitle{
   width: fit-content;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   color: #ffffff;
@@ -17,7 +18,7 @@ html {
   font-family: fantasy;
   line-height: 3.5rem;
   letter-spacing: 0.2rem;
-  font-size: 3rem;
+  font-size: 3.1rem;
   text-shadow: 2px 2px 3px #969696;
 }
 
@@ -26,10 +27,11 @@ form{
   width: fit-content;
   background-color: #ffffff;
   border-radius: 25px;
-  padding: 0.3rem 1.3rem;
+  padding: 0.5rem 1.3rem;
 
   button{
     height: 24px;
+    cursor: pointer;
   }
 }
 
