@@ -98,9 +98,9 @@ def search():
     p_sentence1 = ', '.join(positive_words[0:3])
     p_sentence2 = ', '.join(positive_words[3:6])
     p_sentence3 = ', '.join(positive_words[6:])
-    n_sentence1 = ', '.join(positive_words[0:3])
-    n_sentence2 = ', '.join(positive_words[3:6])
-    n_sentence3 = ', '.join(positive_words[6:])
+    n_sentence1 = ', '.join(negative_words[0:3])
+    n_sentence2 = ', '.join(negative_words[3:6])
+    n_sentence3 = ', '.join(negative_words[6:])
 
     m_per = 100
     n_per = 0
