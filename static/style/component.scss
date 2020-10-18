@@ -1,14 +1,14 @@
 /* 変数宣言 */
-$text-shadow:#969696;
+$text-shadow: #969696;
 
 /* ＜全体の共通部分ここから＞ */
 html {
-	background-color: #57bafd;
+  background-color: #57bafd;
 }
 
 #main {
-	width: fit-content;
-	margin: 0 auto;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 #footer {
@@ -59,11 +59,11 @@ form {
   }
 }
 
-#searchResult{
+#searchResult {
   width: fit-content;
   color: #ffffff;
   font-size: 1.5rem;
-  span{
+  span {
     font-weight: bold;
     color: #ffff02;
     text-shadow: 2px 2px 3px $text-shadow;
@@ -77,7 +77,7 @@ form {
   display: flex;
   align-items: center;
 
-  h1{
+  h1 {
     color: #ffffff;
     font-family: fantasy;
     font-size: 3rem;
@@ -100,7 +100,7 @@ form {
 }
 /* Resultの横線ここまで */
 
-#message{
+#message {
   width: fit-content;
   color: #ffff02;
   font-family: fantasy;
@@ -109,28 +109,29 @@ form {
   letter-spacing: 0.1rem;
 }
 
-#flexWord{
+#flexWord {
   display: flex;
 }
 
-#word{
+#word {
   width: fit-content;
   display: flex;
   flex-direction: column;
-  #resultTitle{
+  #resultTitle {
     text-shadow: none;
     font-size: 2rem;
-    #posi{
+    #posi {
       color: #ff5ac8;
     }
-    #nega{
+    #nega {
       color: #2269e1;
     }
   }
 }
 
 /* 吹き出しここから */
-#left,#right {
+#left,
+#right {
   position: relative;
   width: fit-content;
   display: inline-block;
@@ -138,17 +139,19 @@ form {
   padding: 0.8rem 1.5rem;
   color: #555;
   font-size: 16px;
-  background: #FFF;
+  background: #fff;
   box-sizing: border-box;
   border-radius: 3px;
-  p{
+  p {
     width: 230px;
     margin: 0;
     padding: 0;
+    text-align: center;
   }
 }
 
-#left:before,#right:before {
+#left:before,
+#right:before {
   content: "";
   position: absolute;
   bottom: -24px;
@@ -157,34 +160,38 @@ form {
   z-index: 2;
 }
 
-#right:before{
+#right:before {
   left: 85%;
 }
 
-.posiWord{
-  #left,#right{
+.posiWord {
+  #left,
+  #right {
     border: solid 3px #ff5ac8;
   }
-  #left:before,#right:before{
-    border-top: 12px solid  #ff5ac8;
+  #left:before,
+  #right:before {
+    border-top: 12px solid #ff5ac8;
   }
 }
 
-.negaWord{
-  #left,#right{
-    border: solid 3px  #2269e1;
+.negaWord {
+  #left,
+  #right {
+    border: solid 3px #2269e1;
   }
-  #left:before,#right:before{
-    border-top: 12px solid  #2269e1;
+  #left:before,
+  #right:before {
+    border-top: 12px solid #2269e1;
   }
 }
 /* 吹き出しここまで */
 
-#btns{
+#btns {
   width: fit-content;
   display: flex;
   align-items: center;
-  #btn{
+  #btn {
     width: fit-content;
     background-color: #ffffff;
     padding: 0.7rem 2.5rem;
@@ -194,5 +201,15 @@ form {
     color: #424242;
     margin-left: 2rem;
   }
+}
+
+#goBtn{
+  display: block;
+  width: fit-content;
+  background-color: #ffffff;
+  padding: 0.7rem 2rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  color: #424242;
 }
 /* ＜result.html共通部分ここまで＞ */
