@@ -33,7 +33,7 @@ html {
 }
 
 /* 検索窓ここから */
-form {
+#form {
   width: fit-content;
   background-color: #ffffff;
   border-radius: 25px;
@@ -213,3 +213,44 @@ form {
   color: #424242;
 }
 /* ＜result.html共通部分ここまで＞ */
+
+/* ＜form2.html共通部分ここから＞ */
+#addbtn{
+  width: 2.8rem;
+  height: 2.8rem;
+  background-color: #ffffff;
+  text-align: center;
+  border-radius: 25px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #686868;
+}
+
+#form_area{
+  input{
+    margin: 0 auto 1rem;
+    padding: 0.5rem 2rem;
+    background-color: #ffffff;
+    border-radius: 25px;
+  }
+}
+
+#multiform{
+  #submit-button{
+  width: 2.8rem;
+  height: 2.8rem;
+  background-color: #ffff00;
+  text-align: center;
+  border-radius: 25px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #686868;
+  margin-left: 10rem;
+  }
+}
+
+#formBtn{
+  width: fit-content;
+  margin: 0 auto;
+}
+/* ＜form2.html共通部分ここまで＞ */

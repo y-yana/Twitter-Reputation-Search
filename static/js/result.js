@@ -1,6 +1,6 @@
 var ctx = document.getElementById('pojinegaChart').getContext('2d');
 var chart = new Chart(ctx, {
-  type: 'doughnut',
+  type: 'pie',
   data: {
     labels: ['positive(' + p_per + '%)', 'negative(' + n_per + '%)'],
     datasets: [{
