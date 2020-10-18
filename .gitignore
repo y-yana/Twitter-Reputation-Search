@@ -3,6 +3,7 @@ Thumbs.db
 .env
 /posinega2.txt
 *.pyc
+heroku_env
 
 # Sass
 .sass-cache/
