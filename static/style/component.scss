@@ -254,3 +254,51 @@ html {
   margin: 0 auto;
 }
 /* ＜form2.html共通部分ここまで＞ */
+
+/* ＜result2.html共通部分ここから＞ */
+#searchResults{
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  margin: 1rem auto;
+  font-size: 1.5rem;
+  span {
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 2px 2px 3px $text-shadow;
+    margin: 0.3rem;
+  }
+  #s1{
+      color: #ff1493;
+    }
+    #s2{
+      color: #1414ff;
+    }
+    #s3{
+      color: #14ff63;
+    }
+    #s4{
+      color: #ffff14;
+    }
+    #s5{
+      color: #ffa600;
+    }
+}
+
+#btnsB{
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  margin:2rem auto;
+  #btn {
+    width: fit-content;
+    background-color: #ffffff;
+    padding: 0.7rem 2.5rem;
+    border-radius: 25px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #424242;
+    margin-left: 2rem;
+  }
+}
+/* ＜result2.html共通部分ここまで＞ */
