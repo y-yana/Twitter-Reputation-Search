@@ -1,61 +1,64 @@
 {% extends "layout.html" %} {% block content %}
 
 <div id="main">
-<p id="resultTitle">
-	<span>Twitter</span><span>Reputation</span><span>Search</span>
-</p>
+	<p id="resultTitle">
+		<span>Twitter</span><span>Reputation</span><span>Search</span>
+	</p>
 
-<div class="title-border">
-	<h1>Result</h1>
+	<div class="title-border">
+		<h1>Result</h1>
+	</div>
+
+	<p id="searchResult"><span>{{ name }}</span>の検索結果</p>
+	<div id="canvasArea">
+		<canvas id="pojinegaChart"></canvas>
+	</div>
+
+	<p id="message">{{message}}</p>
+
+	<div id="flexWord">
+		<div class="posiWord" id="word">
+			<p id="resultTitle">
+				<span id="posi">Positive</span><span id="posi">Word</span>
+			</p>
+			<div id="left">
+				<p>test</p>
+			</div>
+			<div id="right">
+				<p>test</p>
+			</div>
+			<div id="left">
+				<p>test</p>
+			</div>
+		</div>
+
+		<div class="negaWord" id="word">
+			<p id="resultTitle">
+				<span id="nega">Negative</span><span id="nega">Word</span>
+			</p>
+			<div id="left">
+				<p>test</p>
+			</div>
+			<div id="right">
+				<p>test</p>
+			</div>
+			<div id="left">
+				<p>test</p>
+			</div>
+		</div>
+	</div>
+
+	<div id="btns">
+		<a
+			href="https://twitter.com/share?ref_src=twsrc%5Etfw"
+			class="twitter-share-button"
+			data-show-count="false"
+			data-text="『{{name}}』の検索結果はポジティブツイートが{{p_per}}%、ネガティブツイートが{{n_per}}%でした！"
+			>Tweet</a
+		>
+		<a id="btn" href="./">Replay</a>
+	</div>
 </div>
-
-<p id="searchResult"><span>{{ name }}</span>の検索結果</p>
-<div id="canvasArea">
-	<canvas id="pojinegaChart"></canvas>
-</div>
-
-<p id="message">{{message}}</p>
-
-<div id="flexWord">
-<div class="posiWord" id="word">
-  <p id="resultTitle"><span id="posi">Positive</span><span id="posi">Word</span></p>
-  <div id="left">
-  	<p>test</p>
-  </div>
-  <div id="right">
-  	<p>test</p>
-  </div>
-  <div id="left">
-  	<p>test</p>
-  </div>
-</div>
-
-<div class="negaWord" id="word">
-  <p id="resultTitle"><span id="nega">Negative</span><span id="nega">Word</span></p>
-  <div id="left">
-  	<p>test</p>
-  </div>
-  <div id="right">
-  	<p>test</p>
-  </div>
-  <div id="left">
-  	<p>test</p>
-  </div>
-</div>
-</div>
-
-<div id="btns">
-  <a
-  	href="https://twitter.com/share?ref_src=twsrc%5Etfw"
-  	class="twitter-share-button"
-  	data-show-count="false"
-  	data-text="『{{name}}』の検索結果はポジティブツイートが{{p_per}}%、ネガティブツイートが{{n_per}}%でした！"
-	>Tweet</a>
-  <a id="btn" href="./">Replay</a>
-</div>
-
-</div>
-
 <div id="footer"></div>
 
 <script
