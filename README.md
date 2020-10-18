@@ -14,7 +14,7 @@ https://shielded-mesa-12200.herokuapp.com
   - CSS
   - Saaa
   - JavaScript
-  - chart.js
+  - Chart.js
 
 - サーバーサイド
   - Python
