@@ -1,16 +1,14 @@
-const btn = document.querySelector(".addbtn");
-var count = 3;
+var i = 2;
 
-btn.onclick =   function addform(){
-  if(count <= 5){
-    var newElement = document.createElement("input"); // input要素作成
-    newElement.setAttribute("id","text-field"); // idを設定
-    newElement.setAttribute("name","name"+count); // nameを設定
-    newElement.setAttribute("placeholder","search word"); // placeholderを設定
-
-    var parentDiv = document.getElementById("multiform");
-    var childP1 = document.getElementsByName(".name2");
-    parentDiv.insertBefore(newElement, childP1.nextSibling);
-    count += 1;
+function addInput() {
+  var input_data = document.createElement('input');
+  input_data.type = 'text';
+  input_data.name = 'name' + i;
+  input_data.placeholder = 'search word';
+  var parent = document.getElementById('form_area');
+  parent.appendChild(input_data);
+  i++;
+  if (i == 6) {
+    document.getElementById("addbtn").disabled = true;
   }
 }
