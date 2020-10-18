@@ -12,9 +12,10 @@ https://shielded-mesa-12200.herokuapp.com
 
   - HTML
   - CSS
-  - Sass
+  - Sass(SCSS)
   - JavaScript
   - Chart.js
+  - jQuery
 
 - サーバーサイド
   - Python
