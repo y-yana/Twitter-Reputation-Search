@@ -83,4 +83,17 @@ def search():
 
             pers.append(p_per)
 
-    return names[0], names[1], names[2], names[3], names[4], pers[0], pers[1], pers[2], pers[3], pers[4]
+    tweet_data = "検索結果: ポジティブツイートの割合は、"
+    i = 0
+    while names[i] != "":
+        if i >= 4:
+            break
+        elif names[i+1] == "":
+            tweet_data += names[i]+"が"+str(pers[i]) + "%"
+        else:
+            tweet_data += names[i]+"が"+str(pers[i]) + "%、"
+        i += 1
+
+    tweet_data += "でした！"
+
+    return names[0], names[1], names[2], names[3], names[4], pers[0], pers[1], pers[2], pers[3], pers[4], tweet_data
