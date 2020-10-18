@@ -12,7 +12,7 @@ https://shielded-mesa-12200.herokuapp.com
 
   - HTML
   - CSS
-  - Saaa
+  - Sass
   - JavaScript
   - Chart.js
 
