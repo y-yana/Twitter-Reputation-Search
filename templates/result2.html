@@ -1,33 +1,21 @@
 {% extends "layout.html" %} {% block content %}
 
-<p>
-	<span id="result_title">Twitter</span
-	><span id="result_title">Reputation</span
-	><span id="result_title">Search</span>
+<div id="main">
+<p id="resultTitle">
+	<span>Twitter</span><span>Reputation</span><span>Search</span>
 </p>
 
+	<div class="title-border">
 <h1>Result</h1>
+</div>
 
-<p>{{ name1 }}の検索結果</p>
-<p>ポジティブツイートの割合 : {{ per1 }}%</p>
+<p id="searchResults"><span id="s1">「{{ name1 }}」</span><span id="s2">「{{ name2 }}」</span><span id="s3">「{{ name3 }}」</span><span id="s4">「{{ name4 }}」</span><span id="s5">「{{ name5 }}」</span></p>
 
-<p>{{ name2 }}の検索結果</p>
-<p>ポジティブツイートの割合 : {{ per2 }}%</p>
-
-<p>{{ name3 }}の検索結果</p>
-<p>ポジティブツイートの割合 : {{ per3 }}%</p>
-
-<p>{{ name4 }}の検索結果</p>
-<p>ポジティブツイートの割合 : {{ per4 }}%</p>
-
-<p>{{ name5 }}の検索結果</p>
-<p>ポジティブツイートの割合 : {{ per5 }}%</p>
-
-<!-- グラフわからん -->
 <div id="canvasArea">
 	<canvas id="pojinegaChart"></canvas>
 </div>
 
+	<div id="btnsB">
 <a
 	href="https://twitter.com/share?ref_src=twsrc%5Etfw"
 	class="twitter-share-button"
@@ -35,8 +23,11 @@
 	data-text="検索結果: ポジティブツイートの割合は、{{ name1 }}が{{ per1 }}%、{{ name2 }}が{{ per2 }}%、 {{ name3 }}が{{ per3 }}%、 {{ name4 }}が{{ per4 }}%、 {{ name5 }}が{{ per5 }}% でした！ "
 	>Tweet</a
 >
+<a id="btn" href="./">Replay</a>
+  </div>
+</div>
 
-<button><a href="./">Replay</a></button>
+<div id="footer"></div>
 
 <script
 	async

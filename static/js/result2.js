@@ -6,11 +6,11 @@ var chart = new Chart(ctx, {
     datasets: [
       {
       label: 'ポジティブツイートの割合',
-      backgroundColor: ['#ff1493', '#1414ff', '#14ff63', '#ffff14', '#ffff9e'],
+      backgroundColor: ['#ff1493', '#1414ff', '#14ff63', '#ffff14', '#ffa600'],
       data: [per1, per2, per3, per4, per5]
-    　}
+    }
     ]
   },
-  options: {  
+  options: {
   }
 });
