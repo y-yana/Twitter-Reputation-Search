@@ -1,6 +1,7 @@
 {% extends "layout.html" %} {% block content %}
 
-<h1><span id="title">Twitter</span><span id="title">Reputation</span><span id="title">Search</span></h1>
+<div id="main">
+<h1 id="topTitle"><span id="title">Twitter</span><span id="title">Reputation</span><span id="title">Search</span></h1>
 
 <form id="multiform" action="/result2" method="post">
 	<div id="form_area">
@@ -12,9 +13,12 @@
 <button type="button" id="addbtn" onclick="addInput()">+</button>
 
 <img src="../static/image/main.png" alt="検索する男性の画像">
+</div>
+
 <button onclick="location.href='/'">ワンワード検索へ</button>
 
-<script type="text/javascript" src="{{ url_for('static', filename='js/form2.js') }}"></script>
+<div id="footer"></div>
 
+<script type="text/javascript" src="{{ url_for('static', filename='js/form2.js') }}"></script>
 
 {% endblock %}
