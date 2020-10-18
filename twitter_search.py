@@ -88,23 +88,24 @@ def search():
             if data.get(t) != None:  # 辞書にあったら
                 if data.get(t) == 1:  # ポジティブと判定されたら
                     ptotal += 1
-                    if len(positive_words) < 10 and not(t in positive_words):
+                    if len(positive_words) < 9 and not(t in positive_words):
                         positive_words.append(t)
                 else:
                     ntotal += 1
-                    if len(negative_words) < 10 and not(t in negative_words):
+                    if len(negative_words) < 9 and not(t in negative_words):
                         negative_words.append(t)
 
-    p_sentence = ', '.join(positive_words)
-    n_sentence = ', '.join(negative_words)
-
-    print(str(ptotal)+" "+str(ntotal))
+    p_sentence1 = ', '.join(positive_words[0:3])
+    p_sentence2 = ', '.join(positive_words[3:6])
+    p_sentence3 = ', '.join(positive_words[6:])
+    n_sentence1 = ', '.join(positive_words[0:3])
+    n_sentence2 = ', '.join(positive_words[3:6])
+    n_sentence3 = ', '.join(positive_words[6:])
 
     m_per = 100
     n_per = 0
     p_per = 0
 
-    name = request.form["name"]
     if not ptotal+ntotal == 0:
         p_per = int(ptotal/(ptotal+ntotal)*100)
         n_per = int(ntotal/(ptotal+ntotal)*100)
@@ -124,4 +125,6 @@ def search():
     else:
         message = "Bad"
 
-    return message, name, p_per, n_per, m_per, p_sentence, n_sentence
+    name = request.form["name"]
+
+    return message, name, p_per, n_per, m_per, p_sentence1, p_sentence2, p_sentence3, n_sentence1, n_sentence2, n_sentence3
