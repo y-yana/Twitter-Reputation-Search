@@ -86,7 +86,10 @@ def search():
     tweet_data = "検索結果: ポジティブツイートの割合は、"
     i = 0
     while names[i] != "":
-        if i >= 4:
+        if i > 4:
+            break
+        elif i==4:
+            tweet_data += names[i]+"が"+str(pers[i]) + "%"
             break
         elif names[i+1] == "":
             tweet_data += names[i]+"が"+str(pers[i]) + "%"

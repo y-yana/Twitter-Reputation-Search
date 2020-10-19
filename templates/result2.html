@@ -1,31 +1,36 @@
 {% extends "layout.html" %} {% block content %}
 
 <div id="main">
-<p id="resultTitle">
-	<span>Twitter</span><span>Reputation</span><span>Search</span>
-</p>
+	<p id="resultTitle">
+		<span>Twitter</span><span>Reputation</span><span>Search</span>
+	</p>
 
 	<div class="title-border">
-<h1>Result</h1>
-</div>
+		<h1>Result</h1>
+	</div>
 
-<p id="searchResults"><span id="s1">「{{ name1 }}」</span><span id="s2">「{{ name2 }}」</span><span id="s3">「{{ name3 }}」</span><span id="s4">「{{ name4 }}」</span><span id="s5">「{{ name5 }}」</span></p>
+	<p id="searchResults">
+		<span id="s1">「{{ name1 }}」</span><span id="s2">「{{ name2 }}」</span
+		><span id="s3">「{{ name3 }}」</span><span id="s4">「{{ name4 }}」</span
+		><span id="s5">「{{ name5 }}」</span>
+	</p>
 
-<div id="canvasArea">
-	<canvas id="pojinegaChart"></canvas>
-</div>
+	<div id="canvasArea">
+		<canvas id="pojinegaChart"></canvas>
+	</div>
 
 	<div id="btnsB">
-<a
-	href="https://twitter.com/share?ref_src=twsrc%5Etfw"
-	class="twitter-share-button"
-	data-url="https://shielded-mesa-12200.herokuapp.com/"
-	data-show-count="false"
-	data-text="{{tweet_data}}"
-	>Tweet</a
->
-<a id="btn" href="./">Replay</a>
-  </div>
+		<a
+			href="https://twitter.com/share?ref_src=twsrc%5Etfw"
+			class="twitter-share-button"
+			data-url="https://shielded-mesa-12200.herokuapp.com/"
+			data-show-count="false"
+			data-text="{{tweet_data}}"
+			data-hashtags="TwitterReputationSearch"
+			>Tweet</a
+		>
+		<a id="btn" href="./">Replay</a>
+	</div>
 </div>
 
 <div id="footer"></div>
