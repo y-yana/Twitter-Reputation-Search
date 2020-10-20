@@ -200,6 +200,9 @@ html {
     font-weight: bold;
     color: #424242;
     margin-left: 2rem;
+    &:hover{
+    background-color: #ffff00;
+  }
   }
 }
 
@@ -211,6 +214,9 @@ html {
   border-radius: 25px;
   font-size: 1rem;
   color: #424242;
+  &:hover{
+    background-color: #ffff00;
+  }
 }
 /* ＜result.html共通部分ここまで＞ */
 
