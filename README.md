@@ -1,8 +1,8 @@
-# Twitter Reputation Search
-
-ワードを入力するとネガポジ判定ができ、Twitter での評判を知ることができます！複数のワードの入力にも対応しているため、比較もできます！きのことたけのこの現在の戦闘力も確認できたり...！？
-
-## アプリの URL
+# Twitter Reputation Search &#x1f603;&#x1f61f;&#x1f50d;
+ワードを入力するとネガポジ判定ができ、Twitter での評判を知ることができます！複数のワードの入力にも対応しているため、比較もできます！きのことたけのこの現在の戦闘力も確認できたり...！？<br><br>
+<image src="static/image/OGP_twitter.png" width="600px">
+  
+## アプリの URL &#x2728;
 
 https://shielded-mesa-12200.herokuapp.com
 
