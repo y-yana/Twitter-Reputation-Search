@@ -32,7 +32,6 @@ def result2():
     name1, name2, name3, name4, name5, per1, per2, per3, per4, per5, tweet_data = ts2.search()
     return render_template("result2.html", name1=name1, name2=name2, name3=name3, name4=name4, name5=name5, per1=per1, per2=per2, per3=per3, per4=per4, per5=per5, tweet_data=tweet_data)
 
-
-    # おまじない
+#おまじない
 if __name__ == "__main__":
     app.run(debug=True)
